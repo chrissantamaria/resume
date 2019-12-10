@@ -1,0 +1,254 @@
+\documentclass[letterpaper,12pt]{article}[leftmargin=*]
+
+\usepackage[empty]{fullpage}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fontawesome}
+\usepackage[sfdefault,light]{FiraSans}
+\usepackage[T1]{fontenc}
+\usepackage{anyfontsize}
+\usepackage{xcolor}
+
+% Header settings
+\def \fullname {Chris Santamaria}
+\def \subtitle {}
+
+\def \linkedinicon {\faLinkedin}
+\def \linkedinlink {https://www.linkedin.com/in/chris-santamaria-10//}
+\def \linkedintext {chris-santamaria-10}
+
+\def \phoneicon {\faPhone}
+\def \phonetext {(813) 545-5164}
+
+\def \emailicon {\faEnvelope}
+\def \emaillink {mailto:chris@santamaria.me}
+\def \emailtext {chris@santamaria.me}
+
+\def \githubicon {\faGithub}
+\def \githublink {https://github.com/chrissantamaria}
+\def \githubtext {chrissantamaria}
+
+\def \websiteicon {\faGlobe}
+\def \websitelink {https://chris.santamaria.me/}
+\def \websitetext {chris.santamaria.me}
+
+\def \headertype {\doublecol} % \singlecol or \doublecol
+
+% Misc settings
+\def \entryspacing {-0pt}
+
+\def \bulletstyle {\faAngleRight}
+
+% Define colours
+\definecolor{primary}{HTML}{000000}
+\definecolor{secondary}{HTML}{0D47A1}
+\definecolor{accent}{HTML}{263238}
+\definecolor{links}{HTML}{1565C0}
+
+%------------------------------------------------------------------------------------------------------------------- 
+
+% Defines to make listing easier
+\def \linkedin {\linkedinicon \hspace{3pt}\href{\linkedinlink}{\linkedintext}}
+\def \phone {\phoneicon \hspace{3pt}{ \phonetext}}
+\def \email {\emailicon \hspace{3pt}\href{\emaillink}{\emailtext}}
+\def \github {\githubicon \hspace{3pt}\href{\githublink}{\githubtext}}
+\def \website {\websiteicon \hspace{3pt}\href{\websitelink}{\websitetext}}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.1in}
+
+% Define the link colours
+\hypersetup{
+    colorlinks=true,
+    urlcolor=links,
+}
+
+% Set the margin alignment 
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+%-------------------------
+% Custom commands
+
+% Sections
+\renewcommand{\section}[2]{\vspace{5pt}
+  \colorbox{secondary}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{7pt}#2}}}
+}
+
+% Entry start and end, for spacing
+\newcommand{\resumeEntryStart}{\begin{itemize}[leftmargin=2.5mm]}
+\newcommand{\resumeEntryEnd}{\end{itemize}\vspace{\entryspacing}}
+
+% Itemized list for the bullet points under an entry, if necessary
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=4.5mm]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+% Resume item
+\renewcommand{\labelitemii}{\bulletstyle}
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% Entry with title, subheading, date(s), and location
+\newcommand{\resumeEntryTSDL}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
+      \textit{\color{accent}\small#3} & \textit{\color{accent}\small#4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+% Entry with title and date(s)
+\newcommand{\resumeEntryTD}[2]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+% Entry for special (skills)
+\newcommand{\resumeEntryS}[2]{
+  \item[]\small{
+    \textbf{\color{primary}#1} #2\vspace{-6pt}
+  }
+}
+
+% Double column header
+\newcommand{\doublecol}[6]{
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    {
+      \begin{tabular}[c]{l}
+        \fontsize{35}{45}\selectfont{\color{primary}{{\textbf{\fullname}}}} \\
+        {\textit{\subtitle}} % You could add a subtitle here
+      \end{tabular}
+    } & {
+      \begin{tabular}[c]{l@{\hspace{1.5em}}l}
+        {\small#4} & {\small#1} \\
+        {\small#5} & {\small#2} \\
+        {\small#6} & {\small#3}
+      \end{tabular}
+    }
+  \end{tabular*}
+}
+
+% Single column header
+\newcommand{\singlecol}[6]{
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    {
+      \begin{tabular}[b]{l}
+        \fontsize{35}{45}\selectfont{\color{primary}{{\textbf{\fullname}}}} \\
+        {\textit{\subtitle}} % You could add a subtitle here
+      \end{tabular}
+    } & {
+      \begin{tabular}[c]{l}
+        {\small#1} \\
+        {\small#2} \\
+        {\small#3} \\
+        {\small#4} \\
+        {\small#5} \\
+        {\small#6}
+      \end{tabular}
+    }
+  \end{tabular*}
+}
+
+\begin{document}
+%-------------------------------------------------- BEGIN HERE --------------------------------------------------
+
+%---------------------------------------------------- HEADER ----------------------------------------------------
+
+\headertype{\linkedin}{\github}{\website}{\phone}{\email}{} % Set the order of items here
+\vspace{-10pt} % Set a negative value to push the body up, and the opposite
+
+\section{\faGraduationCap}{Education}
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {University of Virginia}{August 2018 -- May 2022}
+      {School of Engineering and Applied Science, B.S. Computer Science}{Charlottesville, VA}
+  \resumeEntryEnd
+  \resumeEntryStart
+  \resumeEntryTSDL
+    {The Lawrenceville School}{September 2015 -- May 2018}
+    {Graduated with High Honors}{Lawrenceville, NJ}
+  \resumeEntryEnd
+
+\section{\faCode}{Work Experience}
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Software Engineering Intern}{June 2019 -- August 2019}
+      {Sigora Solar}{Charlottesville, VA}
+    \resumeItemListStart
+      \resumeItem {Contributed to the development of an internal application suite to overhaul solar sales processes}
+      \resumeItem {Assisted with feature additions, bug fixes and creating an end-to-end QA testing environment}
+      \resumeItem {Initiated the development of an internal code standards wiki for better codebase consistency}
+      \resumeItem {Used React, GraphQL and AWS services, all in an Agile/Scrum environment}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Technical Services Assistant}{October 2018 -- Present}
+      {University of Virginia Career Center}{Charlottesville, VA}
+    \resumeItemListStart
+      \resumeItem {Developing web applications for Career Center projects using React, Node.js and Firebase / Google Cloud}
+      \resumeItem {Providing technical support to students, staff and employers at on-campus job fairs and other events}
+      \resumeItem {Maintaining and improving the office’s hardware and server infrastructure}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Fullstack Software Engineer}{July 2017 -- Present}
+      {The Missing Piece}{Tampa, FL}
+    \resumeItemListStart
+      \resumeItem {Designed and developed an internal web application suite interfacing with an existing store database to significantly overhaul day-to-day sales workflow}
+      \resumeItem {Implemented automated merchandise tasks, rapid form generation tools and a customer rewards platform}
+      \resumeItem {Remotely developing additional sales-related applications}
+      \resumeItem {Using React, Node.js and Microsoft Access with Sentry for error monitoring; managing local deployment}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+\section{\faUsers}{Mentorship Experience}
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Deploy Program Coordinator}{August 2019 -- December 2019}
+      {HackCville}{Charlottesville, VA}
+    \resumeItemListStart
+      \resumeItem {Helping teach and manage a new backend software development course Deploy to college students}
+      \resumeItem {Developing curriculum around topics such as Docker, Django / Flask, parallel processing and AWS services}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+  \resumeEntryStart
+    \resumeEntryTSDL
+      {Launch Teaching Fellow}{August 2019 -- Present}
+      {HackCville}{Charlottesville, VA}
+    \resumeItemListStart
+      \resumeItem {Co-instructing the training portion of HackCville’s Launch internship program for selected college students}
+      \resumeItem {Planning content for new Advanced Software Engineering track around fullstack development using React and Node.js}
+    \resumeItemListEnd
+  \resumeEntryEnd
+
+\section{\faGears}{Skills}
+ \resumeEntryStart
+  \resumeEntryS{Proficient in:} {JavaScript (Node.js + React), HTML / CSS, Git, Microsoft Access, Mathematica}
+  \resumeEntryS{Experienced in:} {GraphQL, Firebase / Google Cloud, AWS, Vue.js, Python, Unix, Java, C++}
+ \resumeEntryEnd
+
+ \section{\faStar}{Achievements}
+ \resumeEntryStart
+  \resumeEntryS{Certified Wolfram Technology Associate,} { Mathematica Student Level (2019)}
+  \resumeEntryS{Lawther O. Smith Computer Science Prize,} {for excellence in the study of computer science (2018)}
+ \resumeEntryEnd
+
+\end{document}
