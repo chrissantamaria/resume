@@ -8,6 +8,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{anyfontsize}
 \usepackage{xcolor}
+\usepackage{xifthen}
 
 % Header settings
 \def \fullname {Chris Santamaria}
@@ -100,7 +101,13 @@
   \vspace{-1pt}\item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
-      \textit{\color{accent}\small#3} & \textit{\color{accent}\small#4} \\
+      \ifthenelse{\equal{#3}{}}{
+        % If no employer arg is provided (single line position)
+        \vspace{-17pt}
+      }{
+        % When showing employer name and location
+        \textit{\color{accent}\small#3} & \textit{\color{accent}\small#4} \\
+      }
     \end{tabular*}\vspace{-6pt}
 }
 
@@ -219,7 +226,10 @@
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {Deploy Program Lead}{August 2019 -- December 2019}
+      {Deploy Program Lead}{January 2020 -- Present}
+      {}{}
+    \resumeEntryTSDL
+      {Deploy Program Coordinator}{August 2019 -- December 2019}
       {HackCville}{Charlottesville, VA}
     \resumeItemListStart
       \resumeItem {Teach and manage 10-week course on backend software development to 35+ college students}
