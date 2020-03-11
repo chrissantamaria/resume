@@ -101,21 +101,23 @@
   \vspace{-1pt}\item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
-      \ifthenelse{\equal{#3}{}}{
-        % If no employer arg is provided (single line position)
-        \vspace{-15pt}
-      }{
-        % When showing employer name and location
-        \textit{\color{accent}\small#3} & \textit{\color{accent}\small#4} \\
-      }
+      \textit{\color{accent}\small#3} & \textit{\color{accent}\small#4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
-% Entry with title and date(s)
-\newcommand{\resumeEntryTD}[2]{
+% Entry with title and location
+\newcommand{\resumeEntryTL}[2]{
   \vspace{-1pt}\item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+% Entry with subheading and date(s)
+\newcommand{\resumeEntrySD}[2]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\color{accent}\small#1} & \textit{\color{accent}\small#2} \\
     \end{tabular*}\vspace{-6pt}
 }
 
@@ -189,8 +191,8 @@
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {Software Engineering Intern}{June 2019 -- August 2019}
       {Sigora Solar}{Charlottesville, VA}
+      {Software Engineering Intern}{June 2019 -- August 2019}
     \resumeItemListStart
       \resumeItem {Contributed to the development of an internal application suite to overhaul solar sales processes}
       \resumeItem {Developed feature additions and bug fixes and created an end-to-end QA testing environment}
@@ -201,8 +203,8 @@
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {Technical Services Assistant}{October 2018 -- Present}
       {University of Virginia Career Center}{Charlottesville, VA}
+      {Technical Services Assistant}{October 2018 -- Present}
     \resumeItemListStart
       \resumeItem {Develop web applications for Career Center projects using React, Node.js and Firebase / Google Cloud}
       \resumeItem {Provide technical support to students, staff and employers at on-campus job fairs and other events}
@@ -212,8 +214,8 @@
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {Fullstack Software Engineer}{July 2017 -- Present}
       {The Missing Piece}{Tampa, FL}
+      {Fullstack Software Engineer}{July 2017 -- Present}
     \resumeItemListStart
       \resumeItem {Designed and developed an internal web application suite interfacing with an existing store database}
       \resumeItem {Saved employees 2 hours daily at each store by implementing automated merchandise tasks, rapid form generation tools and a customer rewards platform}
@@ -226,21 +228,16 @@
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {Deploy Program Lead}{January 2020 -- Present}
-      {}{}
-    \resumeEntryTSDL
-      {Deploy Program Coordinator}{August 2019 -- December 2019}
       {HackCville}{Charlottesville, VA}
+      {Deploy Program Lead}{January 2020 -- Present}
+    \resumeEntrySD
+      {Deploy Program Coordinator}{August 2019 -- December 2019}
     \resumeItemListStart
       \resumeItem {Teach and manage 10-week course on software development and deployment to 35+ college students}
       \resumeItem {Developed curriculum on topics such as Docker, Django / Flask, AWS services and system design}
     \resumeItemListEnd
-  \resumeEntryEnd
-
-  \resumeEntryStart
-    \resumeEntryTSDL
+    \resumeEntrySD
       {Launch Teaching Fellow}{August 2019 -- Present}
-      {HackCville}{Charlottesville, VA}
     \resumeItemListStart
       \resumeItem {Co-instruct the Advanced Software Engineering track of summer internship program for college students}
       \resumeItem{Develop curriculum focused on fullstack development with React and Node.js}
