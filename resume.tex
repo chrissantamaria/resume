@@ -24,6 +24,9 @@
 \def \emaillink {mailto:chris@santamaria.me}
 \def \emailtext {chris@santamaria.me}
 
+\def \locationicon {\faMapMarker}
+\def \locationtext {Saint Petersburg, FL}
+
 \def \githubicon {\faGithub}
 \def \githublink {https://github.com/chrissantamaria}
 \def \githubtext {chrissantamaria}
@@ -50,7 +53,8 @@
 % Defines to make listing easier
 \def \linkedin {\linkedinicon \hspace{3pt}\href{\linkedinlink}{\linkedintext}}
 \def \phone {\phoneicon \hspace{3pt}{ \phonetext}}
-\def \email {\emailicon \hspace{3pt}\href{\emaillink}{\emailtext}}
+\def \email {\emailicon \hspace{4pt}\href{\emaillink}{\emailtext}}
+\def \location {\hspace{0pt} \locationicon \hspace{2pt}{ \locationtext}}
 \def \github {\githubicon \hspace{3pt}\href{\githublink}{\githubtext}}
 \def \website {\websiteicon \hspace{3pt}\href{\websitelink}{\websitetext}}
 
@@ -171,7 +175,7 @@
 
 %---------------------------------------------------- HEADER ----------------------------------------------------
 
-\headertype{\linkedin}{\github}{\website}{\phone}{\email}{} % Set the order of items here
+\headertype{\linkedin}{\github}{\website}{\phone}{\email}{\location} % Set the order of items here
 \vspace{0pt} % Set a negative value to push the body up, and the opposite
 
 \section{\faGraduationCap}{Education}
