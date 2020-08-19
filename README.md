@@ -1,6 +1,6 @@
 # Resume
 
-LaTeX source for my personal resume linked on [chris.santamaria.me](https://chris.santamaria.me/). Uses a GitHub Actions workflow for automatic PDF builds uploaded as releases.
+LaTeX source for my personal resume linked on [my site](https://chris.santamaria.me/), based on an awesome template found [here](https://github.com/lcfyi/software-resume-template). Uses a GitHub Actions workflow for automatic PDF builds uploaded as releases.
 
 ## Actions Workflow
 
