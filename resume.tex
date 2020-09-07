@@ -10,7 +10,6 @@
 \usepackage{xcolor}
 \usepackage{xifthen}
 
-% Header settings
 \def \fullname {Chris Santamaria}
 
 \def \linkedinicon {\faLinkedinSquare}
@@ -36,10 +35,7 @@
 \def \websitetext {chris.santamaria.me}
 
 \def \headertype {\doublecol} % \singlecol or \doublecol
-
-% Misc settings
 \def \entryspacing {-0pt}
-
 \def \bulletstyle {\faAngleRight}
 
 % Define colours
@@ -67,17 +63,14 @@
 
 % Define the link colours
 \hypersetup{
-    colorlinks=true,
-    urlcolor=links,
+  colorlinks=true,
+  urlcolor=links,
 }
 
 % Set the margin alignment 
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
-
-%-------------------------
-% Custom commands
 
 % Sections
 \renewcommand{\section}[2]{\vspace{5pt}
@@ -171,38 +164,48 @@
 }
 
 \begin{document}
-%-------------------------------------------------- BEGIN HERE --------------------------------------------------
 
-%---------------------------------------------------- HEADER ----------------------------------------------------
-
-\headertype{\linkedin}{\github}{\website}{\phone}{\email}{\location} % Set the order of items here
+\headertype
+  {\linkedin}
+  {\github}
+  {\website}
+  {\phone}
+  {\email}
+  {\location}
 \vspace{0pt} % Set a negative value to push the body up, and the opposite
 
 \section{\faGraduationCap}{Education}
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {University of Virginia}{August 2018 -- May 2022}
+      {University of Virginia}
+      {August 2018 -- May 2022}
       {School of Engineering and Applied Science, B.S. Computer Science}{Charlottesville, VA}
   \resumeEntryEnd
   \resumeEntryStart
-  \resumeEntryTSDL
-    {The Lawrenceville School}{September 2015 -- May 2018}
-    {Graduated with High Honors}{Lawrenceville, NJ}
-  \resumeEntryEnd
+    \resumeEntryTSDL
+      {The Lawrenceville School}
+      {September 2015 -- May 2018}
+      {Graduated with High Honors}
+      {Lawrenceville, NJ}
+    \resumeEntryEnd
 
 \section{\faCode}{Work Experience}
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {Tinder}{Los Angeles, CA}
-      {Software Engineering Intern}{May 2020 -- January 2021}
+      {Tinder}
+      {Los Angeles, CA}
+      {Software Engineering Intern}
+      {May 2020 -- January 2021}
   \resumeEntryEnd
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {Sigora Solar}{Charlottesville, VA}
-      {Software Engineering Intern}{June 2019 -- August 2019}
+      {Sigora Solar}
+      {Charlottesville, VA}
+      {Software Engineering Intern}
+      {June 2019 -- August 2019}
     \resumeItemListStart
       \resumeItem {Contributed to the development of an internal application suite to overhaul solar sales processes}
       \resumeItem {Implemented a QA integration testing environment with Cypress for increased coverage before release}
@@ -213,8 +216,10 @@
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {University of Virginia Career Center}{Charlottesville, VA}
-      {Technical Services Assistant}{October 2018 -- May 2020}
+      {University of Virginia Career Center}
+      {Charlottesville, VA}
+      {Technical Services Assistant}
+      {October 2018 -- May 2020}
     \resumeItemListStart
       \resumeItem {Developed fullstack web applications for Career Center projects using React and Node.js}
       \resumeItem {Provided technical support to students, staff and employers at on-campus job fairs and other events}
@@ -224,8 +229,10 @@
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {The Missing Piece}{Tampa, FL}
-      {Fullstack Software Engineer}{July 2017 -- Present}
+      {The Missing Piece}
+      {Tampa, FL}
+      {Fullstack Software Engineer}
+      {July 2017 -- Present}
     \resumeItemListStart
       \resumeItem {Implemented an internal web application suite interfacing with existing merchandise and customer data}
       \resumeItem {Saved employees 2 hours daily at each store by automating sales form generation, simplifying inventory uploads to their website and implementing a customer rewards platform}
@@ -235,8 +242,10 @@
 
   \resumeEntryStart
     \resumeEntryTSDL
-      {HackCville}{Charlottesville, VA}
-      {Launch Lead Instructor}{August 2019 -- May 2020}
+      {HackCville}
+      {Charlottesville, VA}
+      {Launch Lead Instructor}
+      {August 2019 -- May 2020}
     \resumeItemListStart
       \resumeItem {Taught the Advanced Software Engineering course of summer internship program for college students}
       \resumeItem{Developed curriculum focused on fullstack development with React and Node.js}
@@ -253,9 +262,13 @@
   \resumeEntryEnd
 
 \section{\faGears}{Skills}
- \resumeEntryStart
-  \resumeEntryS{Proficient in:} {JavaScript (React, Redux, React Native, Node.js), HTML / CSS, Git, Docker, Firebase}
-  \resumeEntryS{Experienced in:} {Gatsby, GraphQL, Google Cloud, AWS, PostgreSQL, Unix, Vue.js, Python}
- \resumeEntryEnd
+  \resumeEntryStart
+  \resumeEntryS
+    {Proficient in:}
+    {JavaScript (React, Redux, React Native, Node.js), HTML / CSS, Git, Docker, Firebase}
+  \resumeEntryS
+    {Experienced in:}
+    {Gatsby, GraphQL, Google Cloud, AWS, PostgreSQL, Unix, Vue.js, Python}
+  \resumeEntryEnd
 
 \end{document}
