@@ -1,0 +1,8 @@
+// For format details, see https://aka.ms/devcontainer.json
+{
+  "name": "TeX Live",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "extensions": ["James-Yu.latex-workshop"]
+}
