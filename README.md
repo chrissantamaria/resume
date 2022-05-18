@@ -6,8 +6,12 @@ LaTeX source for my personal resume linked on [my site](https://chris.santamaria
 
 The action is triggered on a version tag push. To tag changes and push with a tag to GitHub:
 
-```
+```bash
+# create a new tag
 git tag v1.0.0
+# push code
+git push
+# push tags
 git push --tags
 ```
 
