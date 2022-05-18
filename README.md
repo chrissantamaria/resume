@@ -23,3 +23,7 @@ GitHub Actions then:
 - uploads the built PDF as a release asset with [actions/upload-release-asset](actions/upload-release-asset)
 
 All successful workflows can be found in the [Actions](https://github.com/chrissantamaria/resume/actions) tab on GitHub, and builds can be found in the [Releases](https://github.com/chrissantamaria/resume/releases) tab.
+
+## Development container
+
+This repo includes a `.devcontainer` directory which can [create an isolated dev environment](https://code.visualstudio.com/docs/remote/containers) using a local Visual Studio Code instance or [GitHub Codespaces](https://github.com/features/codespaces), preconfigured with necessary build packages and editor extensions.
