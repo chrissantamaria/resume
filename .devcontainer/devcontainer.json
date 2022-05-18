@@ -4,5 +4,8 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "extensions": ["James-Yu.latex-workshop"]
+  "extensions": [
+	"James-Yu.latex-workshop",
+	"mathematic.vscode-pdf"
+]
 }
